@@ -30,6 +30,11 @@ setup(
     author_email="admin@spaceone.dev",
     license="Apache License 2.0",
     packages=find_packages(),
-    install_requires=["spaceone-api", "oci>=2.100.0", "schematics"],
+    install_requires=[
+        "spaceone-api>=1.0.0,<2.0.0",
+        "spaceone-core>=1.0.0,<2.0.0",
+        "oci>=2.100.0",
+        "schematics",
+    ],
     zip_safe=False,
 )
