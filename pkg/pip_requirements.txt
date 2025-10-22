@@ -2,3 +2,4 @@ oci>=2.100.0
 schematics
 spaceone-api>=1.0.0,<2.0.0
 spaceone-core>=1.0.0,<2.0.0
+cryptography>=41.0.5,<45
