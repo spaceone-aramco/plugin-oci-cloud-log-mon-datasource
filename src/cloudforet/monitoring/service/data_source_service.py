@@ -27,7 +27,6 @@ class DataSourceService(BaseService):
 
         Args:
             params (dict): {
-                'schema': 'str',
                 'options': 'dict',
                 'secret_data': 'dict'
             }

@@ -14,22 +14,22 @@
 #   limitations under the License.
 
 
-from setuptools import setup, find_packages
+from setuptools import find_packages, setup
 
 with open("VERSION", "r") as f:
     VERSION = f.read().strip()
     f.close()
 
 setup(
-    name="plugin-google-cloud-logging",
+    name="plugin-oci-cloud-logging",
     version=VERSION,
-    description="Google cloud logging collector",
+    description="Oracle Cloud Infrastructure (OCI) logging collector",
     long_description="",
     url="https://www.cloudforet-io.com/",
     author="MEGAZONE SpaceONE Team",
     author_email="admin@spaceone.dev",
     license="Apache License 2.0",
     packages=find_packages(),
-    install_requires=["spaceone-api", "google-api-python-client", "schematics"],
+    install_requires=["spaceone-api", "oci>=2.100.0", "schematics"],
     zip_safe=False,
 )

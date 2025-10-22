@@ -1,7 +1,8 @@
 from schematics import Model
-from schematics.types import ModelType, ListType
-from cloudforet.monitoring.model.event_model import Event
+from schematics.types import ListType, ModelType
+
+from cloudforet.monitoring.model.event_model import OCILogEvent
 
 
 class Log(Model):
-    results = ListType(ModelType(Event), default=[])
+    results = ListType(ModelType(OCILogEvent), default=[])

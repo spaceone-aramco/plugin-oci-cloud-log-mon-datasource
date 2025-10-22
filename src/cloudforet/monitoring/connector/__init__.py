@@ -1,1 +1,1 @@
-from cloudforet.monitoring.connector.cloud_logging_connector import CloudLoggingConnector
+from cloudforet.monitoring.connector.oci_logging_connector import OCILoggingConnector

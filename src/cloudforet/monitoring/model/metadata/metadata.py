@@ -22,8 +22,8 @@ class MetaDataView(Model):
 
 class LogMetadata(Model):
     view = ModelType(MetaDataView)
-    required_keys = ListType(StringType, default=['data.google_cloud_logging'])
-    supported_providers = ListType(StringType, default=['google_cloud'])
+    required_keys = ListType(StringType, default=["data.oci_logging"])
+    supported_providers = ListType(StringType, default=["oci"])
 
     @classmethod
     def set_fields(cls, name='', fields=[]):
