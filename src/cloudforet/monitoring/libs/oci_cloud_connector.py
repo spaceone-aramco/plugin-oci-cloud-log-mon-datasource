@@ -15,9 +15,12 @@ class OCIConnector(BaseConnector):
         query = kwargs.get("query") or {}
 
         self.region = query.get("region") or self.secret_data.get("region")
-        self.compartment_id = self.secret_data.get(
-            "compartment_id"
-        ) or self.secret_data.get("tenancy")
+        self.compartment_id = (
+            query.get("compartment_id")
+            or self.secret_data.get("compartment_id")
+            or self.secret_data.get("tenancy")
+        )
+        _LOGGER.debug(f"OCI Connector - compartment_id: {self.compartment_id}")
 
     def get_config(self):
         """OCI 설정 딕셔너리 생성"""

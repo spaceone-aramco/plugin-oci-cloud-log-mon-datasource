@@ -32,7 +32,7 @@ class LogMetadata(Model):
 
     @classmethod
     def set_meta(cls, name='', fields=[], search=[], widget=[]):
-        table_meta = MetaDataViewTable({'layout': TableDynamicLayout.set_fields(name, fields)})
+        table_meta = MetaDataViewTable({'layout': TableDynamicLayout.set_fields(name, fields=fields)})
         return cls({'view': MetaDataView({'table': table_meta, 'search': search, 'widget': widget})})
 
 
